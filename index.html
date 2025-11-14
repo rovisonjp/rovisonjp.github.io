@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Desenvolvo pequenos projetos como o Bickcraft utilizando apenas HTML, CSS e Javascript. Para aplicativos web ">
+  <title>Róvison Desenvolvedor e Designer</title>
+  <!-- Sempre que possivel desabilite o link da CSS para ver se faz sentido a descrições de toda a pagina. -->
+  <link rel="stylesheet" href="./css/style.min.css">
+  <!-- para linkar use link com pseudo css e informar link com ./ ate achar o arquivo. -->
+</head>
+
+<body>
+  <header class="hearder">
+    <img src="./img/marca.svg" alt="lobo" width="104" height="38">
+    <nav>
+      <ul class="header-menu">
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <!-- toda vez que usar um link para scrool da mesma pagina use (# na frente da palavra do link) -->
+      </ul>
+    </nav>
+  </header>
+
+  <main class="introducao">
+    <img src="./img/perfil.jpg" alt="lobo" width="360" height="520">
+    <div>
+      <h1>Desenvolvendor<br>
+        Front End &<br>
+        UX / UI Design</h1>
+      <p>Localizado em Minas Gerais</p>
+      <!-- tag <br> quebra o texto -->
+    </div>
+
+  </main>
+
+  <section class="experiencia" id="experiencia" aria-label="Experiência">
+    <!-- Ao inves de colocar artigo como Experiencia é uma seção define-se section
+     contendo classe, id , e o mais importante uma aria-label -->
+    <h2 class="subtitulo">Experiência</h2>
+    <div>
+      <p class="experiencia-texto">Desenvolvo pequenos projetos como o Bickcraft
+        utilizando apenas <strong>HTML</strong>, <strong>CSS</strong> e <strong>Javascript</strong>. Para
+        aplicativos web como a rede social Dogs eu
+        trabalhei no <strong>UX</strong> e <strong>UI Design do projeto</strong></p>
+      <div class="empresa">
+        <span class="empresa-ano">2045</span>
+        <h3 class="empresa-titulo">Bickcraft</h3>
+        <span class="empresa-titulo">Desenvolvedor Junior</span>
+        <p class="empresa-texto">No projeto Bickcraft realizei trabalhos no desenvolvimentos completo do HTML, CSS e Javascript do site. Além disso, tambem prestei consultoria no Design.</p>
+        <ul class="empresa-habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>UX Design</li>
+          <li>UI Design</li>
+        </ul>
+      </div>
+
+      <div class="empresa">
+        <span class="empresa-ano">2044-45</span>
+        <h3 class="empresa-titulo">Surfbot</h3>
+        <span class="empresa-titulo">Auxiliar Desenvolvedor</span>
+        <p class="empresa-texto">No projeto Surfbot realizei trabalhos no desenvolvimentos completo do HTML, CSS e Javascript do site. Além disso, tambem prestei consultoria no Design.</p>
+        <ul class="empresa-habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+        </ul>
+      </div>
+      <div class="empresa">
+        <span class="empresa-ano">2044</span>
+        <h3 class="empresa-titulo">Brafe</h3>
+        <span class="empresa-titulo">Design</span>
+        <p class="empresa-texto">No projeto Brafe realizei trabalhos no desenvolvimentos completo do HTML, CSS e Javascript do site. Além disso, tambem prestei consultoria no Design.</p>
+        <ul class="empresa-habilidades">
+          <li>Email Marketing</li>
+          <li>HTML</li>
+          <li>UX Design</li>
+          <li>UI Design</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="formacao" id="formacao" aria-label="Formação">
+    <!-- Devido esta seção ter fundo preto é necessario ter uma div para que o fundo preto passe dos 1200px sendo estilizado na DIV abaixo -->
+    <div class="formacao-container">
+      <h2 class="subtitulo">Formação</h2>
+      <div>
+        <p class="formacao-texto">Minha mais recente experiencia foi a pos graduação em Gestão em <strong>MBA e Govenrncia de T.I</strong>; Alem disso me mantenho sempre atulizado com cursos intensivos no mercado. de <strong>HTML</strong> e <strong>UX Design</strong>.</p>
+        <ul class="faculdade-lista">
+          <li class="faculdade">
+            <span class="faculdade-tipo">Ensino Medio</span>
+            <h3 class="faculdade-curso">Tecnico em Informatica</h3>
+            <span class="faculdade-instituicao">E.E. Teodosio Bandeira</span>
+          </li>
+          <li class="faculdade">
+            <span class="faculdade-tipo">Tecnólogo</span>
+            <h3 class="faculdade-curso">Processos Gerenciais</h3>
+            <span class="faculdade-instituicao">Unis MG</span>
+          </li>
+          <li class="faculdade">
+            <span class="faculdade-tipo">Pos Graduação</span>
+            <h3 class="faculdade-curso">MBA - Gestão Tecnologia de Informação</h3>
+            <span class="faculdade-instituicao">Unis MG</span>
+          </li>
+        </ul>
+        <div class="formacao-extra">
+          <div class="cursos">
+            <h3>Cursos Intensivos</h3>
+            <ul>
+              <li>UX Design & UI Design <span>56h</span></li>
+              <li>Front End para Iniciantes <span>56h</span></li>
+            </ul>
+          </div>
+          <div class="idiomas">
+            <h3>Idiomas</h3>
+            <ul>
+              <li>Inglês Intensivo <span>16h</span></li>
+              <li>Espanho Basico <span>08h</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <footer class="footer" id="contato">
+    <!-- lembre-se de colocar id conforme link acima ancorado com #contato para funcionar-->
+    <div class="footer-container">
+      <p class="footer-texto">Para maiores informações, por gentileza entre contato
+      </p>
+      <ul class="footer-contato">
+        <li>rovisonjp@hotmail.com</li>
+        <li>+55 35999865036</li>
+        <li><a href="https://www.instagram.com/rovisonjosepereira?igsh=bGE1bWk5bnFzam9h">@instragram_rovison</a>
+        </li>
+      </ul>
+      <p class="footer-copy">Róvison - Alguns direitos reservados</p>
+    </div>
+  </footer>
+</body>
+
+</html>

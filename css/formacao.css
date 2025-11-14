@@ -1,0 +1,173 @@
+.formacao {
+  background: #141414;
+  /* apos inserido background esta seção ficara todo fundo preto */
+  color: #ffffff;
+  /* Sendo assim necessario color: ffffff para deixar a fonte na cor branco */
+}
+
+.formacao-container {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* sempre mantenha a mesma fração igual na apresentação por seção. */
+  gap: 100px;
+  position: relative;
+}
+
+.formacao-container::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+  /* alinhamento da imagem detalhe */
+}
+
+.formacao .subtitulo {
+  color: #000000;
+  max-width: 5ch;
+}
+
+.formacao-texto {
+  font-size: 1.5 rem;
+  line-height: 1.33;
+  max-width: 45ch;
+  /* faz com que os textos tenha no maximo 40 caracteres por linha */
+  margin-bottom: 60px;
+  color: #a3a3a3;
+}
+
+.formacao-texto strong {
+  color: #ffffff;
+}
+
+.faculdade-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.faculdade {
+  flex: 1;
+  /* Use flex: 1; para organizar os display para todos fiquem no mesmo tamanho */
+  background: #000000;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faculdade-tipo {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  margin-bottom: 10px;
+  /* somente adicionar o gap 10px não funciona deve ter <spam> no html para isto coloque um display flex e flex direction colum para aceitar. */
+}
+
+.faculdade-curso {
+  flex: 1;
+  /* Este (flex 1) faz com que ele cresça */
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  position: relative;
+  /* position para aceitar detalhes de span ou before. */
+}
+
+.faculdade-curso::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#b6f829, #67dd0a);
+  /* todo detalhe a content tem que estar vazia e colocar display block */
+  position: absolute;
+  left: -24px;
+  /* Para alinhar o detalhe do before usando no left soma como tem padding de 20 px definido e with 4px deve somar os dois com valor negativo ou seja -24px */
+}
+
+.faculdade-instituicao {
+  font-size: 1.125rem;
+  color: #a3a3a3;
+  /* Somente esta estilização não faz com que ele fiquem na grid sendo necessario informar um estilização de  (flex: 1;) para que o nome cresça em na classe faculdade-curso */
+}
+
+.cursos {
+  margin-bottom: 60px;
+}
+
+.formacao-extra h3 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #8f8f8f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.formacao-extra h3::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  /* para saber o tamanho exato de uma imagem abra num editor de texto */
+  position: absolute;
+  left: -36px;
+  top: -4px;
+  /* esta estilização define bloco,tamanho e posição sendo necessario informar background com para classe diferentes url separadas */
+}
+
+.cursos h3::before {
+  background: url("../img/cursos.svg") no-repeat center center;
+}
+
+.idiomas h3::before {
+  background: url("../img/idiomas.svg") no-repeat center center;
+}
+
+.formacao-extra li {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-botton: 20px;
+}
+
+.formacao-extra span {
+  color: #8f8f8f;
+}
+
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+  /* faz com que a lista fica alinhada lado a lado e distribuidos nos cantos mantendo espaço no centro */
+}
+
+/* ;Parte responsiva */
+
+@media (max-width: 800px) {
+  .formacao-container {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .formacao.subtitulo {
+    color: #ffffff;
+  }
+
+  .formacao-texto {
+    font-size: 1.25rem;
+  }
+
+  .formacao-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+  /* faça isto para que os icones tenha posição incial e não fique para fora da margem */
+}

@@ -1,0 +1,54 @@
+.footer {
+  background: #000000;
+}
+
+.footer-container {
+  max-width: 1200px;
+  padding: 120px 20px 60px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* sempre mantenha a mesma fração igual na apresentação por seção. */
+  gap: 100px;
+  align-items: center;
+  /* faz com que os itens do container seja alinhado ao centro */
+}
+
+.footer-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #cccccc;
+}
+
+
+.footer-contato li {
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.footer-contato li a {
+  color: #cccccc;
+  /* text-decoration: none; */
+}
+
+.footer-copy {
+  grid-column: 1 / -1;
+  font-size: 1.125rem;
+  color: #8f8f8f;
+  /* Nesta parte inspecione o site html e vera que o footer tem um gap no meio de 100px, para que o texto não quebre coloque grid colum 1 / -1 */
+}
+
+/* parte responsivo */
+@media (max-width: 800px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-contato li {
+    font-size: 1.5rem;
+  }
+}

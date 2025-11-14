@@ -1,0 +1,72 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  /* mantem um espaço da imagem ao titulo e paragrafo 100px */
+  align-items: center;
+}
+
+.introducao h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  /* Para chegar no valor de 1.125 no figma veja a fonte em pixel ou seja 75px/16 (rem) valor de 4.5, depois multiplicar 4.5 *16 * 1.125 = 81 rem  */
+  margin-bottom: 30px;
+  position: relative;
+}
+.introducao h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute;
+  /* se desprende sozinho com relação ao pai. */
+  top: -15px;
+  left: -40px;
+  z-index: -1;
+  /* top negativo 15px e left -40px alinha no centro da primeira letra, ATENÇÃO Z-INDEX joga a img da url para tras do texto. */
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+/* Responsivo */
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 3rem;
+    /* abaixo de 1000px fonte passa ter 3rem */
+  }
+}
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    /* quando a pagina for menor que 800px o grid template coluns passa ter 1 fr 1fr ao inves de 2fr na segunda coluna */
+    gap: 40px;
+  }
+  .introducao h1 {
+    font-size: 2rem;
+  }
+  .introducao h1::before {
+    width: 30px;
+    /* largura de 30 px */
+    height: 10px;
+    /* altura de 10px */
+    left: 0px;
+    /* alinha mais proximo da letra do titulo */
+  }
+}
+@media (max-width: 400px) {
+  .introducao {
+    grid-template-columns: 1fr;
+    /* abaixo de 400px passa ter somente 1 coluna */
+  }
+  .introducao img {
+    display: none;
+    /* some com a img abaixo de 400px */
+  }
+}

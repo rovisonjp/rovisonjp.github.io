@@ -1,0 +1,122 @@
+.experiencia {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* sempre mantenha a mesma fração igual na apresentação por seção. */
+  gap: 100px;
+}
+
+.experiencia .subtitulo {
+  color: #e0e0e0;
+  /* inserido duas classes pelo motivo apenas a classe do subtitulo que estiver dentro da classe experiencia ira receber a cor branca */
+}
+
+.experiencia-texto {
+  font-size: 1.5 rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  /* faz com que os textos tenha no maximo 40 caracteres por linha */
+  margin-bottom: 60px;
+  color: #525252;
+}
+
+.experiencia-texto strong {
+  color: #141414;
+}
+
+.empresa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.empresa::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#b6f829, #67dd0a);
+  /* todo detalhe a content tem que estar vazia e colocar display block */
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+.empresa-ano {
+  position: absolute;
+  top: 20px;
+  left: -100px;
+  text-align: right;
+  width: 80px;
+  /* juntando text align right e width de 80px e se quiser um background
+  para forças com widht sendo maior para que seja alinhado a direita */
+  color: #525252;
+  font-size: 0.875rem;
+}
+
+.empresa-titulo {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.empresa-texto {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #525252;
+}
+
+.empresa-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: start;
+  /* align conten alinha os itens no incio do container. */
+}
+
+.empresas-habilidades li {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 5px 10px;
+}
+
+/* Parte responsiva */
+@media (max-width: 800px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .experiencia .subtitulo {
+    color: #141414;
+  }
+
+  .experiencia-texto {
+    font-size: 1.25rem;
+  }
+  .empresa-ano {
+    position: initial;
+    /* somente position joga o valor para cima */
+    order: 1;
+    /* joga o valor para baixo, porque os demais não foram definidos as ordens */
+    width: initial;
+    /* joga para o inicio podendo se exapandir*/
+    text-align: left;
+    /* texto alinhado a esquerda */
+  }
+}
+
+@media (max-width: 400px) {
+  .empresa{
+    grid-template-columns: 1fr;
+  }
+  
+}
+

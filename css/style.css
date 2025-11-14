@@ -1,0 +1,8 @@
+@import "./global.css";
+@import "./header.css";
+@import "./introducao.css";
+@import "./experiencia.css";
+@import "./formacao.css";
+@import "./footer.css";
+/* Sempre distribuia, criando novos arquivos de estilizações (CSS) para facilitar a organização de partes da pagina de html.  */
+/* Use @import para conectar outros arquivos CSS */

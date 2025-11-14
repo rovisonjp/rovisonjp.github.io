@@ -1,0 +1,49 @@
+/*  Global CSS serve para resetar e deixar tudo que é padrão em toda pagina. */
+body {
+  font-family: "Fire Sans", Arial, Helvetica, sans-serif;
+  margin: 0px;
+  color: #141414;
+  /* margin-bottom: 1000px; */
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  /* links e ul não herdam alguns detalhes padrão por isto tem que resetar  */
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  /* faz isto para que altura fique automatica */
+  display: block;
+  /* sempre deixe a imagem ocupe 100% da sua imagem
+  e colocar a imagem num bloco */
+}
+
+.subtitulo {
+  font-size: 8rem;
+  line-height: 1;
+  text-transform: uppercase;
+  word-break: break-all;
+  /* Quebra a palavra */
+  /* Quando inserido max-width com 4ch faz com que o texto use 4 carecters, depois quebre */
+  max-width: 4ch;
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial !important;
+    /* apos 800px subtitulo (EXPERIENCIA) Passa para 3rem , capatalize primeira letra maiscula, max-widht initial permitidno que cresça, mas atenção caso algum texto venha ser quebrado na parte responsiva é importante definir (max-width: initial !important;) seja prioridade acima da area responsiva*/
+  }
+}

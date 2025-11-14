@@ -1,0 +1,47 @@
+/* Estilizando o cabeçalho */
+header {
+  max-width: 1200px;
+  padding: 40px 20px;
+  /* max-widht faz com que o site não cresça mais do que 1200 px e tenha um padding 40 e 20 px */
+  margin: 0 auto;
+  /* margin sempre 0 no topo e automatico manter alinhados os itens esquerda e direita. */
+  display: flex;
+  justify-content: space-between;
+  /* display flex para colocar um do lado do outro */
+  /* justify-content: space-between; coloca um em cada canto */
+  align-items: center;
+  /* manter o img e menu alinhados ao centro */
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* mantem os link de navegação com espaço entre eles de 10px , wrap para quebrar alinhados em linha */
+  justify-content: center; /* Colocas os itens do menu alinhado ao centro */
+}
+
+.header-menu a {
+  font-size: 1.125rem; /* Esta fonte foi calcula de acordo usado no figma para calcular dividir o rem informado no figma por 16 */
+  line-height: 1.3; /* espaço 1.3 para tipografia */
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #141414;
+  display: block;
+}
+
+/* Tornando o cabeçalho responsivo abaixo */
+/* quando a pagina for menor 800px de largura faça:*/
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    /* Colum: Muda o menu e a imagem em uma coluna */
+    gap: 40px;
+    padding: 20x; /* aumenta o espaço entre eles porem diminui o padding 20px para ficarem menor */
+  }
+  header a {
+    background: #e9e5e5;
+    border-radius: 4px;
+    /* coloca um background com contraste melhor */
+  }
+}
